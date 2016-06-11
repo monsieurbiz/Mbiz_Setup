@@ -1,0 +1,15 @@
+{
+    "name": "monsieurbiz/mbiz_setup",
+    "description": "Magento module which gives an easy way to create CMS blocks and pages.",
+    "type": "magento-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Jacques Bodin-Hullin",
+            "email": "j.bodinhullin@monsieurbiz.com"
+        }
+    ],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "Allows to manage this package as a dependency."
+    }
+}
