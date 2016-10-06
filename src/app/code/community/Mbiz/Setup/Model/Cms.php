@@ -171,10 +171,12 @@ class Mbiz_Setup_Model_Cms extends Mage_Core_Model_Abstract
             $data['stores'] = $this->_getStores($data['stores']);
         }
 
-        return Mage::getModel('cms/page')
-            ->setData($data)
-            ->save()
-        ;
+        $page = Mage::getModel('cms/page')
+            ->setStores($data['stores'])
+            ->load($data['identifier'], 'identifier');
+
+        return $page->addData($data)
+            ->save();
     }
 
     /**
