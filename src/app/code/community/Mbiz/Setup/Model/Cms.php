@@ -173,6 +173,7 @@ class Mbiz_Setup_Model_Cms extends Mage_Core_Model_Abstract
 
         $page = Mage::getModel('cms/page')
             ->setStores($data['stores'])
+            ->setStoreId(array_pop($data['stores']))
             ->load($data['identifier'], 'identifier');
 
         return $page->addData($data)
